@@ -1,4 +1,4 @@
-# Escape Sequences in Python
+# Escape Sequences
 
 ## What are Escape Sequences?
 

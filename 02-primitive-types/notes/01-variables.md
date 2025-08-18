@@ -1,4 +1,4 @@
-# Variables in Python
+# Variables
 
 ## What are Variables?
 

@@ -1,4 +1,4 @@
-# Strings in Python
+# Strings
 
 ## Creating Strings
 
