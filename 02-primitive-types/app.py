@@ -1,10 +1,15 @@
-course = "  python programming"
+x = 1
+x = 1.1
+x = 1 + 2j  # a + bi
 
-print(course.upper())  # convert to capitalize
-print(course.lower())  # convert to lowercase
-print(course.title())  # all first letters are cap
-print(course.strip())  # remove whitespace from beginning - also have lstrip & rstrip
-print(course.find("Pro"))
-print(course.replace("p", "j"))
-print("pro" in course)
-print("dennis" not in course)
+print(10 + 3)
+print(10 - 3)
+print(10 * 3)
+print(10 / 2)
+print(10 // 2)
+print(10 % 3)
+print(10**3)
+
+x = 10
+x = x + 3
+x += 3
