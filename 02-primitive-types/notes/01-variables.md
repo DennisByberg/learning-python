@@ -2,7 +2,7 @@
 
 ## What are Variables?
 
-Variables are used to **store data in computer memory**. Think of a variable as a labeled box where you can put information that your program can use later.
+Variables **store data in computer memory**. Think of a variable as a labeled box.
 
 ```python
 students_count = 1000
@@ -68,10 +68,9 @@ count = 10
 print(count)  # 10
 ```
 
-## Key Takeaways
+## Key Points
 
 - Variables store data in computer memory
 - **Python is case sensitive** - `name` ≠ `Name`
-- Use snake_case naming convention
-- Use descriptive names that explain what the variable contains
+- Use **snake_case** naming convention
 - Variables can be

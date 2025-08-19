@@ -1,139 +1,64 @@
 # Formatted Strings
 
-## What are Formatted Strings?
-
-Formatted strings (f-strings) are a modern way to combine variables and text in Python. They make it easy to insert variable values into strings.
-
 ## F-String Syntax
 
-Use `f` before the opening quote and put variables inside curly braces `{}`:
+Use `f` before quotes and put variables inside `{}`:
 
 ```python
 first = "Dennis"
 last = "Byberg"
 
-# F-string - modern approach
-full_name = f"{first} {last}"
-print(full_name)  # Dennis Byberg
+full_name = f"{first} {last}"  # Dennis Byberg
 ```
 
-## Why Use F-Strings?
+## Why F-Strings?
 
-### Before F-Strings (Old Methods)
+### Old Methods
 
 ```python
-first = "Dennis"
-last = "Byberg"
-
-# String concatenation - harder to read
+# String concatenation - messy
 full_name = first + " " + last
 
-# .format() method - more verbose
+# .format() method - verbose
 full_name = "{} {}".format(first, last)
-
-# % formatting - outdated
-full_name = "%s %s" % (first, last)
 ```
 
-### With F-Strings (Modern)
+### Modern F-Strings
 
 ```python
-first = "Dennis"
-last = "Byberg"
-
 # Clean and readable
 full_name = f"{first} {last}"
 ```
 
-## F-String Examples
+## Examples
 
-### Basic Variable Insertion
+### Variables and Expressions
 
 ```python
 name = "Alice"
 age = 25
 
-message = f"Hello, my name is {name} and I am {age} years old"
-print(message)  # Hello, my name is Alice and I am 25 years old
+message = f"Hello, I'm {name} and I'm {age} years old"
+result = f"Sum: {5 + 3}"  # Sum: 8
 ```
 
-### Expressions Inside F-Strings
-
-You can put any Python expression inside the curly braces:
+### Function Calls
 
 ```python
-a = 5
-b = 3
-
-result = f"The sum of {a} and {b} is {a + b}"
-print(result)  # The sum of 5 and 3 is 8
+course = "Python Programming"
+info = f"Course '{course}' has {len(course)} characters"
 ```
 
-### Function Calls in F-Strings
-
-```python
-name = "Python Programming"
-message = f"The course '{name}' has {len(name)} characters"
-print(message)  # The course 'Python Programming' has 18 characters
-```
-
-## Real Example from Our Code
-
-```python
-first = "Dennis"
-last = "Byberg"
-
-full_name = f"{first} {last}"
-full_name_length = len(full_name)
-
-print(full_name)        # Dennis Byberg
-print(full_name_length) # 13
-```
-
-## Advanced F-String Features
-
-### Formatting Numbers
+### Number Formatting
 
 ```python
 price = 19.99567
-formatted_price = f"Price: ${price:.2f}"
-print(formatted_price)  # Price: $19.99
-```
-
-### Multi-line F-Strings
-
-```python
-name = "John"
-age = 30
-city = "Stockholm"
-
-info = f"""
-Name: {name}
-Age: {age}
-City: {city}
-"""
-print(info)
+formatted = f"Price: ${price:.2f}"  # Price: $19.99
 ```
 
 ## Key Points
 
-- **F-strings** start with `f` before the quote
-- **Variables** go inside curly braces `{}`
-- **Expressions** can be evaluated inside `{}`
-- **Functions** can be called inside `{}`
-- **Modern and readable** - preferred over older string formatting methods
-- **Available in Python 3.6+**
-
-## Best Practices
-
-```python
-# Good - clear and readable
-name = "Alice"
-age = 25
-message = f"Hello {name}, you are {age} years old"
-
-# Avoid - harder to read
-message = "Hello " + name + ", you are " + str(age) + " years old"
-```
-
-F-strings make your code cleaner and easier to understand!
+- **F-strings** start with `f` before quotes
+- **Variables/expressions** go inside `{}`
+- **Modern and readable** - preferred method
+- \*\*Available in Python 3.6
