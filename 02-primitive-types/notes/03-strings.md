@@ -3,11 +3,8 @@
 ## Creating Strings
 
 ```python
-# Single quotes
-course = 'Python Programming'
-
-# Double quotes
-course = "Python Programming"
+course = 'Python Programming'  # Single quotes
+course = "Python Programming"  # Double quotes
 
 # Triple quotes (multi-line)
 message = """
@@ -23,11 +20,7 @@ course = "Python Programming"
 print(len(course))  # 18
 ```
 
-**`len()`** is a function. **Arguments** go inside parentheses.
-
 ## Accessing Characters
-
-### Zero Indexing
 
 ```python
 course = "Python Programming"
@@ -60,4 +53,4 @@ print(course[:])    # Python Programming - entire string
 - **`len()`** returns character count
 - **Zero-indexed** - first character is `[0]`
 - **Negative indexing** counts from end
-- **Slicing**
+- **Slicing** uses `[start:end]` format

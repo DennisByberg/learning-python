@@ -1,45 +1,37 @@
 # String Methods
 
-## Object Methods with Dot Notation
+## Dot Notation
 
-Everything in Python is an **object**. Strings have methods accessed with **dot notation**.
+Strings are **objects** with methods accessed using **dot notation**.
 
 ```python
 course = "  python programming"
-course.upper()  # Access method with dot
+course.upper()  # "  PYTHON PROGRAMMING"
 ```
 
 ## Common Methods
 
-### Case Conversion
-
 ```python
-course.upper()  # "  PYTHON PROGRAMMING"
-course.lower()  # "  python programming"
-course.title()  # "  Python Programming"
-```
+course = "  python programming"
 
-### Whitespace
+# Case conversion
+course.upper()   # "  PYTHON PROGRAMMING"
+course.lower()   # "  python programming"
+course.title()   # "  Python Programming"
 
-```python
+# Whitespace
 course.strip()   # "python programming" - both ends
 course.lstrip()  # left side only
 course.rstrip()  # right side only
-```
 
-### Finding & Replacing
+# Finding & Replacing
+course.find("python")       # 2 (index)
+course.find("Pro")          # -1 (not found - case sensitive)
+course.replace("p", "j")    # "  jython jrogramming"
 
-```python
-course.find("python")  # 2 (index)
-course.find("Pro")     # -1 (not found - case sensitive)
-course.replace("p", "j")  # "  jython jrogramming"
-```
-
-### Membership Testing
-
-```python
-"pro" in course      # True
-"dennis" not in course  # True
+# Membership testing
+"pro" in course             # True
+"dennis" not in course      # True
 ```
 
 ## Key Points

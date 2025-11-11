@@ -2,7 +2,7 @@
 
 ## What are Variables?
 
-Variables **store data in computer memory**. Think of a variable as a labeled box.
+Variables **store data in computer memory**.
 
 ```python
 students_count = 1000
@@ -11,9 +11,7 @@ is_published = False
 course_name = "Python Programming"
 ```
 
-## Key Rules
-
-### Python is Case Sensitive
+## Python is Case Sensitive
 
 ```python
 name = "John"
@@ -22,19 +20,18 @@ NAME = "Bob"
 # These are three DIFFERENT variables!
 ```
 
-### Variable Naming Rules
+## Variable Naming Rules
 
-**Valid names:**
+**Valid:**
 
 ```python
 age = 25
 first_name = "Alice"
-student_count = 100
 _private_var = "hidden"
 course2024 = "Python"
 ```
 
-**Invalid names:**
+**Invalid:**
 
 ```python
 2students = 100      # Cannot start with number
@@ -42,7 +39,7 @@ first-name = "Bob"   # Hyphens not allowed
 class = "Math"       # 'class' is a reserved keyword
 ```
 
-### Naming Convention
+## Naming Convention
 
 Use **snake_case** in Python:
 
@@ -56,21 +53,9 @@ studentCount = 1000
 courseName = "Python"
 ```
 
-## Reassigning Variables
-
-Variables can be changed:
-
-```python
-count = 5
-print(count)  # 5
-
-count = 10
-print(count)  # 10
-```
-
 ## Key Points
 
 - Variables store data in computer memory
 - **Python is case sensitive** - `name` ≠ `Name`
 - Use **snake_case** naming convention
-- Variables can be
+- Variables can be reassigned

@@ -9,35 +9,23 @@ x = input("x: ")  # Returns string
 x = int(x)        # Convert to integer
 ```
 
-## Built-in Conversion Functions
-
-### String to Number
+## Conversion Functions
 
 ```python
-x = input("x: ")     # "10" (string)
-x = int(x)           # 10 (integer)
-y = float(x)         # 10.0 (float)
+# String to Number
+x = int("10")           # 10 (integer)
+y = float("3.14")       # 3.14 (float)
+
+# Number to String
+x = str(10)             # "10" (string)
+
+# Boolean
+x = bool(1)             # True
+x = bool(0)             # False
+x = bool("")            # False
 ```
 
-### Number to String
-
-```python
-x = 10
-x = str(x)           # "10" (string)
-```
-
-### Boolean Conversion
-
-```python
-x = bool(1)          # True
-x = bool(0)          # False
-x = bool("")         # False
-x = bool("Hello")    # True
-```
-
-## Common Conversions
-
-### Input Conversion
+## Input Conversion
 
 ```python
 # Wrong - input() returns string
@@ -49,29 +37,21 @@ age = int(input("Age: "))
 next_year = age + 1   # Works!
 ```
 
-### One-line Conversion
-
-```python
-x = int(input("x: "))  # Convert directly
-y = float(input("Price: "))
-```
-
 ## Falsy Values
 
 Values that convert to `False`:
 
 ```python
-print(bool(""))      # False - empty string
-print(bool(0))       # False - zero
-print(bool(None))    # False - None
-print(bool([]))      # False - empty list
+bool("")      # False - empty string
+bool(0)       # False - zero
+bool(None)    # False - None
 ```
 
 ## Key Points
 
 - **`input()`** always returns a string
 - **`int()`** converts to integer
-- **`float()`** converts to decimal number
+- **`float()`** converts to float
 - **`str()`** converts to string
 - **`bool()`** converts to True/False
-- **Falsy values**: `""`, `0`,
+- **Falsy values**: `""`, `0`, `None`
