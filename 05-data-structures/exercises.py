@@ -19,6 +19,14 @@ print("=" * 60)
 
 
 # YOUR CODE HERE:
+fruits = []
+
+fruits.append("apple")
+fruits.append("banana")
+fruits.append("cherry")
+fruits.remove("banana")
+
+print(fruits)
 
 
 # ============================================================================
@@ -36,7 +44,10 @@ print("=" * 60)
 
 
 # YOUR CODE HERE:
+numbers = [10, 20, 30, 40, 50]
 
+print(numbers.index(30) if 30 in numbers else "30 is not in the list")
+print(60 in numbers)
 
 # ============================================================================
 # EXERCISE 3: Sorting Lists
@@ -54,6 +65,15 @@ print("=" * 60)
 
 
 # YOUR CODE HERE:
+prices = [50, 20, 80, 15, 40]
+
+# ascending
+prices.sort()
+print(prices)
+
+# descending
+prices.sort(reverse=True)
+print(prices)
 
 
 # ============================================================================
@@ -72,7 +92,16 @@ print("=" * 60)
 
 
 # YOUR CODE HERE:
+stack = []
 
+stack.append("action1")
+stack.append("action2")
+stack.append("action3")
+
+last = stack.pop()
+
+print(last)
+print(stack)
 
 # ============================================================================
 # EXERCISE 5: Queue (FIFO)
@@ -89,7 +118,14 @@ print("=" * 60)
 
 
 # YOUR CODE HERE:
+from collections import deque
 
+queue = deque(["customer1", "customer2", "customer3"])
+
+queue.popleft()
+queue.append("customer4")
+
+print(queue)
 
 # ============================================================================
 # EXERCISE 6: Tuple Unpacking
@@ -107,6 +143,12 @@ print("=" * 60)
 
 
 # YOUR CODE HERE:
+cordinates = (10, 20, 30)
+x, y, z = cordinates
+
+print(x)
+print(y)
+print(z)
 
 
 # ============================================================================
@@ -124,6 +166,13 @@ print("=" * 60)
 
 
 # YOUR CODE HERE:
+a = 5
+b = 10
+
+a, b = b, a
+
+print("a:", a)
+print("b:", b)
 
 
 # ============================================================================
@@ -140,7 +189,13 @@ print("=" * 60)
 
 
 # YOUR CODE HERE:
+from array import array
 
+values = array("i", [1, 2, 3, 4, 5])
+
+values.append(6)
+
+print("values:", values)
 
 # ============================================================================
 # EXERCISE 9: Sets - Remove Duplicates
@@ -156,7 +211,8 @@ print("=" * 60)
 
 
 # YOUR CODE HERE:
-
+numbers = [1, 3, 3, 2, 2, 3, 4, 5, 5]
+print(sorted(list(set(numbers))))
 
 # ============================================================================
 # EXERCISE 10: Set Operations
@@ -178,6 +234,16 @@ print("=" * 60)
 
 
 # YOUR CODE HERE:
+set1 = {1, 2, 3, 4}
+set2 = {3, 4, 5, 6}
+
+combined = set1 | set2
+common = set1 & set2
+difference = set1 - set2
+
+print(combined)  # all unique items
+print(common)  # common items
+print(difference)
 
 
 # ============================================================================
@@ -195,6 +261,11 @@ print("=" * 60)
 
 
 # YOUR CODE HERE:
+student = {"name": "Alice", "age": 20, "grade": "A"}
+student.update(city="Stockholm")
+student.update(age=21)
+
+print(student)
 
 
 # ============================================================================
@@ -213,6 +284,10 @@ print("=" * 60)
 
 
 # YOUR CODE HERE:
+prices = {"apple": 1.5, "banana": 0.5, "cherry": 2.0}
+
+for product, price in prices.items():
+    print(f"{product} costs {price}")
 
 
 # ============================================================================
@@ -225,40 +300,22 @@ print("=" * 60)
 # Write code to find the most repeated character (ignore spaces)
 # Hint: Use a dictionary to count characters, then find the max
 # Print the character and its count
-# Expected output: i: 6
+# Expected output: i: 5
 
 
 # YOUR CODE HERE:
+sentence = "This is a common interview question"
+sentence = sentence.lower()
 
+counter = {}
 
-# ============================================================================
-# EXERCISE 14: Dictionary Comprehension
-print("\n" + "=" * 60)
-print("EXERCISE 14: Dictionary Comprehension")
-print("=" * 60)
-# ============================================================================
-# Create a dictionary comprehension that maps numbers 1-5 to their cubes
-# Expected output: {1: 1, 2: 8, 3: 27, 4: 64, 5: 125}
+for char in sentence:
+    if char != " ":
+        if char in counter:
+            counter[char] += 1
+        else:
+            counter[char] = 1
 
+most_frequent_char = max(counter, key=counter.get)  # type: ignore
 
-# YOUR CODE HERE:
-
-
-# ============================================================================
-# EXERCISE 15: Unpacking Operator
-print("\n" + "=" * 60)
-print("EXERCISE 15: Unpacking Operator")
-print("=" * 60)
-# ============================================================================
-# Create two lists:
-# list1 = [1, 2, 3]
-# list2 = [4, 5, 6]
-# Use the unpacking operator to combine them into one list
-# Print the combined list
-# Expected output: [1, 2, 3, 4, 5, 6]
-
-
-# YOUR CODE HERE:
-
-
-print("\n✅ Exercises complete! Run the program to test your solutions.")
+print(f"{most_frequent_char}: {counter.get(most_frequent_char)}")
